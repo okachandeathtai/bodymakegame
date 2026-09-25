@@ -1,0 +1,18 @@
+/* Mobile controls stay vertical: the game never requires horizontal scrolling. */
+.preset-scroll {
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  grid-template-columns: 1fr 1fr;
+  overflow-x: visible;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: none;
+}
+
+.preset {
+  scroll-snap-align: none;
+}
+
+@media (max-width: 350px) {
+  .preset-scroll { grid-template-columns: 1fr; }
+}
